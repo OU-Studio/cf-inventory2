@@ -80,7 +80,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
       variants: nodes(ids: $variantIds) {
         ... on ProductVariant {
           id
-          title
+          title 
           sku
           inventoryQuantity
           product { id title handle }
@@ -96,7 +96,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      query: gql,
+      query: gql, 
       variables: { productIds, variantIds },
     }),
   });
